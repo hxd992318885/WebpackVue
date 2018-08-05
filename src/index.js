@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './app.vue'
 //引入所需要分析的页面
-import './assets/style/test.css'
-import './assets/images/20161002111216_PVtxh.jpeg'
+import './assets/style/global.styl'
+
 const root = document.createElement('div')
 document.body.appendChild(root)
 

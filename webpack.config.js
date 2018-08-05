@@ -48,6 +48,20 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.styl/,
+                use: [
+                    'style-loader',
+                    'css-loader', {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,//提高编译速度
+                        }
+                    },
+                    'stylus-loader'
+                ]
+
             }
 
         ]
@@ -78,6 +92,7 @@ if (isDev) {
 
         hot: true //热加载,数据不会丢失,flase任意修改数据都会刷新
     }
+
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin(),//启动功能
         new webpack.NoEmitOnErrorsPlugin()//规避多余数据
